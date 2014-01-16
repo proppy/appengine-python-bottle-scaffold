@@ -1,3 +1,4 @@
 *.pyc
 .DS_Store
-
+# ignore the contents of the lib directory.
+lib/
