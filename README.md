@@ -46,7 +46,7 @@ appcfg.py -A <your-project-id> --oauth2 update .
 
 ### Feedback
 Star this repo if you found it useful. Use the github issue tracker to give
-feedback on this repo and to ask for scaffolds for other use cases.
+feedback on this repo and to ask for skeletons for other frameworks.
 
 ## Contributing changes
 See [CONTRIB.md](CONTRIB.md)
