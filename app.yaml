@@ -33,3 +33,5 @@ handlers:
 # defined in `path.to.module` python module.
 - url: .*  # This regex directs all routes to main.app
   script: main.bottle
+# Require that the client is logged in.
+  login: required

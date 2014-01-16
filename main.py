@@ -1,20 +1,22 @@
 """`main` is the top-level module for your Bottle application."""
 
-# Import the Bottle framework
+# Import the Bottle framework.
 from bottle import Bottle
+# Import the App Engine Users API.
+from google.appengine.api import users
 
 # Create the Bottle wsgi application.
 bottle = Bottle()
 
 
-# Handle requests to '/'.
+# Handle HTTP requests to '/'.
 @bottle.route('/')
 def home():
-    """ Return Hello World at application root URL"""
-    return "Hello World"
+    """ Return a personalized greeting."""
+    user = users.get_current_user()
+    return "Hello %s!" % (user or "World")
 
-
-# Handle 404 errors.
+# Handle HTTP 404 errors.
 @bottle.error(404)
 def error_404(error):
     """Return a custom 404 error."""
